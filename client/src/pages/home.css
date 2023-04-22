@@ -1,0 +1,90 @@
+/* styles.css */
+
+/* Container styles */
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  /* Title styles */
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  form input,
+  form textarea,
+  form select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #008CBA;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* List styles */
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  li:last-of-type {
+    border-bottom: none;
+  }
+  
+  li .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  li .actions button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  li .actions .delete {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  li .actions .edit {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  

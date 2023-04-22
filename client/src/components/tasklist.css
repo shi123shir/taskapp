@@ -1,0 +1,72 @@
+/* ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  li h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  li p {
+    margin: 0;
+  }
+  
+  li button {
+    background-color: #20e3a9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 5px 10px;
+     
+  }
+  
+  li button:hover {
+    background-color: #f2f2f2;
+  } */
+
+  .task-list{
+    list-style: none;
+    padding: 0;
+  }
+  .task-list li {
+    text-align: center;
+    margin: bottom 1rem; 
+    padding: 1rem;
+  }
+
+  .task-list h2{
+    margin: 0;
+  }
+  .task-list p{
+    margin: 0.5rem 0;
+  }
+  .task-list div{
+    display: flex;
+    justify-content: center;
+  }
+  .task-list button {
+    background-color: rgb(157, 202, 204);
+    color: rgb(30, 27, 27);
+    padding: 0.5rem  1rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius:0.25rem ;
+    cursor:pointer;
+  }
+
+  .task-list button:hover{
+    background-color: #f2f2f2;
+  }
