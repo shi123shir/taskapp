@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function TaskForm({ onCreateTask }) {
   const [task, setTasks] = useState("");
   const [description, setDescription] = useState("");
@@ -11,6 +12,7 @@ function TaskForm({ onCreateTask }) {
     setTasks("");
     setDescription("");
     setStatus("");
+    window.location.reload()
   };
 
   return (

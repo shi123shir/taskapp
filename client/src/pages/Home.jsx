@@ -90,7 +90,7 @@ function Home() {
         onDeleteTask={handleDeleteTask}
       />
 
-      <div><button><Link to="/login">Logout</Link></button></div>
+      <div><button onClick={()=> localStorage.removeItem("token")}><Link to="/login">Logout</Link></button></div>
      
     </div>
     

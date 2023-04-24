@@ -89,7 +89,7 @@ const getallTask =  async (req, res) => {
         .send({ status: false, msg: "not Authorized User!!!" });
     }
     const todos = await Todo.findAll({ where: { userId: userId } });
-    if (todos.length > 0) {
+    if (todos.length >= 0) {
         return res.status(200).send({ status: true, message: "Todos fetch successful", data: todos });
     } else {
         res.status(404).send({ message: "No todos found" });

@@ -6,7 +6,7 @@ import "./tasklist.css"
 function TaskList({ tasks, onUpdateTask, onDeleteTask }) {
   return (
     <ul className="task-list">
-      {tasks.map((task) => ( 
+      {tasks.map((task) => (
           <li key={task.id}>
           <h2>{task.task}</h2>
           <p>{task.description}</p>
