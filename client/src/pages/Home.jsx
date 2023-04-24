@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/getUser/${userId}`, {
+        const response = await axios.get(`https://todo-app-7a59.onrender.com/getUser/${userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -28,7 +28,7 @@ function Home() {
   const handleCreateTask = async (task, description, status) => {
     try {
       let userId = localStorage.getItem("userId")
-      const response = await axios.post(`http://localhost:5000/createtask`, {
+      const response = await axios.post(`https://todo-app-7a59.onrender.com/createtask`, {
         task,
         description,
         status,
@@ -47,7 +47,7 @@ function Home() {
 
   const handleUpdateTask = async (taskId, updates) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/updatetask/${taskId}`, updates, {
+      const response = await axios.patch(`https://todo-app-7a59.onrender.com/updatetask/${taskId}`, updates, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -65,7 +65,7 @@ function Home() {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:5000/deletetask/${taskId}`, {
+      await axios.delete(`https://todo-app-7a59.onrender.com/deletetask/${taskId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
