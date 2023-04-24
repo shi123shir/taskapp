@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-       await axios.post("http://localhost:5000/register", formData);
+       await axios.post("https://todo-app-7a59.onrender.com/register", formData);
       Navigate("/login")
     } catch (err) {
       console.log(err);
