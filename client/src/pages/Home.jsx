@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [tasks, setTasks] = useState([]);
-        let userId = localStorage.getItem("userId")
+        
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get(`https://todo-app-7a59.onrender.com/getUser/${userId}`, {
+        let userId = localStorage.getItem("userId")
+        const response = await axios.get(`http://localhost:5000/getUser/${userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -23,12 +24,12 @@ function Home() {
       }
     };
     fetchTasks();
-  }, [userId]);
+  }, []);
 
   const handleCreateTask = async (task, description, status) => {
     try {
       let userId = localStorage.getItem("userId")
-      const response = await axios.post(`https://todo-app-7a59.onrender.com/createtask`, {
+      const response = await axios.post(`http://localhost:5000/createtask`, {
         task,
         description,
         status,
@@ -47,17 +48,16 @@ function Home() {
 
   const handleUpdateTask = async (taskId, updates) => {
     try {
-      const response = await axios.patch(`https://todo-app-7a59.onrender.com/updatetask/${taskId}`, updates, {
+      const response = await axios.patch(`http://localhost:5000/updatetask/${taskId}`, updates, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
       const updatedTask = response.data;
-      console.log(updatedTask,taskId , updates)
+   
       setTasks((prevTasks) =>
         prevTasks.map((task) => (task.id === taskId ? updatedTask : task))
       );
-      window.location.reload()
     } catch (error) {
       console.error(error);
     }
@@ -65,7 +65,7 @@ function Home() {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      await axios.delete(`https://todo-app-7a59.onrender.com/deletetask/${taskId}`, {
+      await axios.delete(`http://localhost:5000/deletetask/${taskId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -73,7 +73,7 @@ function Home() {
       setTasks((prevTasks) =>
         prevTasks.filter((task) => task._id !== taskId)
       );
-      window.location.reload()
+      
     } catch (error) {
       console.error(error);
     }

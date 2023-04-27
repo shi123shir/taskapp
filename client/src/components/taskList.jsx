@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./tasklist.css"
 
 function TaskList({ tasks, onUpdateTask, onDeleteTask }) {
@@ -24,7 +25,7 @@ function TaskList({ tasks, onUpdateTask, onDeleteTask }) {
           <button onClick={() => onUpdateTask(task.id, { status: "completed" })}>
             Move to Completed
           </button>
-          <button style={{backgroundColor:"red"}} onClick={() => onDeleteTask(task.id)}>Delete</button>
+        <button style={{backgroundColor:"red"}} onClick={() => onDeleteTask(task.id)}>Delete</button>
           </div>
         </li>
       ))}
