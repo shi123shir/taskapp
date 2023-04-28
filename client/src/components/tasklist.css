@@ -47,8 +47,8 @@
     padding: 1rem;
   }
 
-  .task-list h2{
-    margin: 0;
+  .task-list > h4{
+     text-align: left;
   }
   .task-list p{
     margin: 0.5rem 0;

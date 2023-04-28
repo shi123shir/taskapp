@@ -9,7 +9,7 @@ function TaskList({ tasks, onUpdateTask, onDeleteTask }) {
     <ul className="task-list">
       {tasks.map((task) => (
           <li key={task.id}>
-          <h2>{task.task}</h2>
+          <h4>{task.task}</h4>
           <p>{task.description}</p>
           <p>Current-Status: {task.status}</p>
           <div>
