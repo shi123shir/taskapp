@@ -24,6 +24,9 @@ function Home() {
       }
     };
     fetchTasks();
+    return ()=>{
+      localStorage.removeItem("token")
+    }
   }, []);
 
   const handleCreateTask = async (task, description, status) => {
